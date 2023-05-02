@@ -47,4 +47,8 @@ app.get('/app/rpsls/play/(rock|paper|scissors|lizard|spock)/', (req,res) {
 	res.status(200).send(rpsls(req.params.shot));
 });
 
-	
+app.get('*', (req,res) {
+	res.status(404).send('404 NOT FOUND')
+});
+
+app.listen(port);	
