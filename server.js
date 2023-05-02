@@ -29,7 +29,7 @@ app.post('/app/rps/play/', (req,res) => {
 });
 
 app.post('/app/rpsls/play/', (req,res) => {
-	res.status(200).send(rpsls.rspls(req.body.shot));
+	res.status(200).send(rpsls.rpsls(req.body.shot));
 });
 
 app.get('/app/rps/play/', (req,res) => {
