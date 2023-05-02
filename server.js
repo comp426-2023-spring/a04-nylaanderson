@@ -11,6 +11,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const port = args.port || 5000;
 
-app.get('/app/', (req, ress) {
+app.get('/app/', (req, res) {
 	res.status(200).send("200 OK");
 });
+
+app.get('/app/rps/', (req, res) {
+	res.status(200).send(rps());
+});
+
+app.get('/app/rpsls/', (req, res) {
+	res.status(200).send(rps());
+});
+
