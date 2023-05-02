@@ -21,31 +21,31 @@ app.get('/app/rps/', (req, res) => {
 });
 
 app.get('/app/rpsls/', (req, res) => {
-	res.status(200).send(rpsls());
+	res.status(200).send(rpsls.rpslsStd());
 });
 
 app.post('/app/rps/play/', (req,res) => {
-	res.status(200).send(rps(req.body.shot));
+	res.status(200).send(rpsls.rps(req.body.shot));
 });
 
 app.post('/app/rpsls/play/', (req,res) => {
-	res.status(200).send(rpsls(req.body.shot));
+	res.status(200).send(rpsls.rspls(req.body.shot));
 });
 
 app.get('/app/rps/play/', (req,res) => {
-	res.status(200).send(rps(req.query.shot));
+	res.status(200).send(rpsls.rps(req.query.shot));
 });
 
 app.get('/app/rpsls/play/', (req,res) => {
-	res.status(200).send(rps(req.query.shot));
+	res.status(200).send(rpsls.rpsls(req.query.shot));
 });
 
 app.get('/app/rpsls/play/:shot/', (req,res) => {
-	res.status(200).send(rps(req.params.shot));
+	res.status(200).send(rpsls.rps(req.params.shot));
 });
 
 app.get('/app/rpsls/play/:shot/', (req,res) => {
-	res.status(200).send(rpsls(req.params.shot));
+	res.status(200).send(rpsls.rpsls(req.params.shot));
 });
 
 app.get('*', (req,res) => {
