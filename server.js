@@ -36,6 +36,15 @@ app.get('/app/rps/play/', (req,res) {
 });
 
 app.get('/app/rpsls/play/', (req,res) {
-	res.status(200.send(rps(req.query.shot));
+	res.status(200).send(rps(req.query.shot));
 });
+
+app.get('/app/rpsls/play/(rock|paper|scissors)/', (req,res) {
+	res.status(200).send(rps(req.params.shot));
+});
+
+app.get('/app/rpsls/play/(rock|paper|scissors|lizard|spock)/', (req,res) {
+	res.status(200).send(rpsls(req.params.shot));
+});
+
 	
